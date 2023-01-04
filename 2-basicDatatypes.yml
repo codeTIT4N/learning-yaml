@@ -1,0 +1,53 @@
+# String variables
+myself: Lokesh Kumar
+gender: "male"
+passion: 'Programming'
+
+# Write multiple lines
+bio: |
+  hey my name is Lokesh Kumar.
+  I like DLTs.
+
+# Write a single line in multiple lines
+message: > 
+ this will 
+ all be in 
+ one single line.
+
+number: 5473
+marks: 98.34
+booleanValueF: No # can also write n, N, no, false, False, FALSE
+booleanValueT: Yes # can also write y, Y, yes, true, True, TRUE - though many of these are deprecated(use true false ones)
+
+#specify the type - YAML automatically detects, but you can also tell it
+zero: !!int 0
+positiveNum: !!int 45
+negativeNum: !!int -45
+binaryNumber: !!int 0b101
+octalNumber: !!int 06574
+hexa: !!int 0x45
+commaValue: !!int +540_000 # 540,000
+#floating point numbers
+mathMarks: !!float 96.44
+infinite: !!float .inf
+not a num: .nan
+anotherBooleanValue: !!bool true
+stringVal: !!str I am 22 yrs old 
+#null
+surname: !!null Null # can also provide null NULL ~
+~: This is null key
+exponential number: 6.03E56
+
+# Arrays
+cities:
+ - chandigarh
+ - new delhi
+ - mumbai
+ - prayagraj
+---
+cities : [new delhi, chandigarh]
+
+#Dates and time
+date: !!timestamp 2002-12-14T02:59:00
+india time: 2002-12-14T02:59:00 +5:30 ##by default its UTC
+...

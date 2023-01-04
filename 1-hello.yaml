@@ -1,0 +1,21 @@
+# Key-Value style
+"apple" : "I am a red fruit"
+234 : "I am your roll number"
+--- #document start
+# List style
+- Apple
+- apple #note: this is different from Apple - YAML is case sensitive
+- Strawberry
+- Mango
+---
+#Block style
+cities:
+ - chandigarh
+ - new delhi
+ - mumbai
+ - prayagraj
+---
+cities : [new delhi, chandigarh] #flow type
+---
+{mango: "yellow fruit", age: 55}
+... #document end

@@ -1,0 +1,7 @@
+student: !!seq #sequence datatype for lists
+ - marks
+ - name
+ - roll_no
+
+# like this also
+cities: [delhi, chandigarh]
