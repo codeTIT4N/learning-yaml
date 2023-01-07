@@ -1,0 +1,107 @@
+student: !!seq #sequence datatype for lists
+  - marks
+  - name
+  - roll_no
+
+# like this also
+cities: [delhi, chandigarh]
+
+# some of the keys of the seq will be empty
+# this is know as a sparse sequence
+sparse seq:
+  - hey
+  - how
+  -
+  - Null
+  - sup
+---
+# nested sequence
+- - mango
+  - apple
+  - banana
+- - marks
+  - roll num
+  - date
+
+# key: value pairs are called maps
+# !!map
+---
+# nested mappings: map within a map
+name: Lokesh Kumar
+role:
+  age: 21
+  job: student
+
+# pairs: Keys may have duplicate values
+# !!pairs
+
+pair example: !!pairs
+  - job: student
+  - job: teacher
+#this will be an array of hash tables
+---
+#same as
+pair example: !!pairs [job: student, job: teacher]
+
+# !!set will allow you to have unique values
+names: !!set
+  ? Lokesh
+  ? Lohit
+  ? Siddhartha
+
+# Dictionary datatype !!omap
+people: !!omap
+  - Lokesh:
+      - name: Lokesh Kumar
+      - age: 22
+      - passion: coding
+  - Lohit:
+      - name: Lohit Paul
+      - age: 21
+      - passion: cybersecurity
+
+# Reusing some properties using anchors
+likings: &likes
+  fav fruit: mango
+  dislikes: turnip
+
+person1:
+  name: Lokesh Kumar
+  fav fruit: mango
+  dislikes: turnip
+
+person2:
+  name: Lohit Paul
+  fav fruit: mango
+  dislikes: turnip
+
+person3:
+  name: Siddhartha
+  fav fruit: mango
+  dislikes: turnip
+
+# now in the above case the fav fruit, and dislikes of these 3 people are repeating
+# we will fix this using anchors like this:
+
+person5:
+  name: Swarinim
+  <<: *likes
+
+person6:
+  name: Shruti
+  <<: *likes
+
+person7:
+  name: Kanika
+  <<: *likes
+
+# we can also overwrite somethings like:
+person8:
+  name: Sunny
+  <<: *likes
+  dislikes: eggplant
+# this will look like:
+# person8:
+#   name: Sunny
+#   fav fruit: mango
+#   dislikes: eggplant

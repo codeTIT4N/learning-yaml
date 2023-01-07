@@ -1,7 +1,7 @@
 # String variables
 myself: Lokesh Kumar
 gender: "male"
-passion: 'Programming'
+passion: "Programming"
 
 # Write multiple lines
 bio: |
@@ -9,10 +9,10 @@ bio: |
   I like DLTs.
 
 # Write a single line in multiple lines
-message: > 
- this will 
- all be in 
- one single line.
+message: >
+  this will 
+  all be in 
+  one single line.
 
 number: 5473
 marks: 98.34
@@ -32,7 +32,7 @@ mathMarks: !!float 96.44
 infinite: !!float .inf
 not a num: .nan
 anotherBooleanValue: !!bool true
-stringVal: !!str I am 22 yrs old 
+stringVal: !!str I am 22 yrs old
 #null
 surname: !!null Null # can also provide null NULL ~
 ~: This is null key
@@ -40,14 +40,13 @@ exponential number: 6.03E56
 
 # Arrays
 cities:
- - chandigarh
- - new delhi
- - mumbai
- - prayagraj
+  - chandigarh
+  - new delhi
+  - mumbai
+  - prayagraj
 ---
-cities : [new delhi, chandigarh]
+cities: [new delhi, chandigarh]
 
 #Dates and time
 date: !!timestamp 2002-12-14T02:59:00
 india time: 2002-12-14T02:59:00 +5:30 ##by default its UTC
-...

@@ -1,0 +1,8 @@
+---
+School:
+  - name: KVS
+    principal: Someone
+    Students:
+      - rno: 25
+        name: Lokesh
+        marks: 97
